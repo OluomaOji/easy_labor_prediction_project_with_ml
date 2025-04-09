@@ -1,0 +1,73 @@
+{
+  "build": "h777c5d8_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [
+    "__osx >=10.13"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/libutf8proc-2.10.0-h777c5d8_0",
+  "files": [
+    "include/utf8proc.h",
+    "lib/libutf8proc.3.1.0.dylib",
+    "lib/libutf8proc.3.dylib",
+    "lib/libutf8proc.dylib",
+    "lib/pkgconfig/libutf8proc.pc"
+  ],
+  "fn": "libutf8proc-2.10.0-h777c5d8_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/libutf8proc-2.10.0-h777c5d8_0",
+    "type": 1
+  },
+  "md5": "0c9c79979aeba96d102b0628fe361c56",
+  "name": "libutf8proc",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/libutf8proc-2.10.0-h777c5d8_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/utf8proc.h",
+        "path_type": "hardlink",
+        "sha256": "d947b38124a9f218631b537dd7a367f6a2a6a992c72caa46b3f3e7c81e6138ee",
+        "sha256_in_prefix": "d947b38124a9f218631b537dd7a367f6a2a6a992c72caa46b3f3e7c81e6138ee",
+        "size_in_bytes": 33458
+      },
+      {
+        "_path": "lib/libutf8proc.3.1.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "9c09ce5537d6c49a15cb44f42ce05c57166a418c2518635068cf947e0ad1d021",
+        "sha256_in_prefix": "9c09ce5537d6c49a15cb44f42ce05c57166a418c2518635068cf947e0ad1d021",
+        "size_in_bytes": 354720
+      },
+      {
+        "_path": "lib/libutf8proc.3.dylib",
+        "path_type": "softlink",
+        "sha256": "9c09ce5537d6c49a15cb44f42ce05c57166a418c2518635068cf947e0ad1d021",
+        "size_in_bytes": 354720
+      },
+      {
+        "_path": "lib/libutf8proc.dylib",
+        "path_type": "softlink",
+        "sha256": "9c09ce5537d6c49a15cb44f42ce05c57166a418c2518635068cf947e0ad1d021",
+        "size_in_bytes": 354720
+      },
+      {
+        "_path": "lib/pkgconfig/libutf8proc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/libutf8proc_1737244256051/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "183bbea7a100ccd972ab459aa1d45a43ef4cca50bf6f9c4fef16f520abc7ec46",
+        "sha256_in_prefix": "2e8139afe011ca3a48e8dd1ce1b41f922cd7048e0305b8d8412040b2e2d9dc0f",
+        "size_in_bytes": 1213
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "cbac7991d6ede019fd744b9b386bb8f973ad2500c8cdcef4425e1334400125d0",
+  "size": 80336,
+  "subdir": "osx-64",
+  "timestamp": 1737244400000,
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/libutf8proc-2.10.0-h777c5d8_0.conda",
+  "version": "2.10.0"
+}

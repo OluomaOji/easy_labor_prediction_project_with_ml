@@ -1,0 +1,37 @@
+{
+  "build": "py310h2ec42d9_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [
+    "libarrow-acero 19.0.1.*",
+    "libarrow-dataset 19.0.1.*",
+    "libarrow-substrait 19.0.1.*",
+    "libparquet 19.0.1.*",
+    "pyarrow-core 19.0.1 *_0_*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/pyarrow-19.0.1-py310h2ec42d9_0",
+  "files": [],
+  "fn": "pyarrow-19.0.1-py310h2ec42d9_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/pyarrow-19.0.1-py310h2ec42d9_0",
+    "type": 1
+  },
+  "md5": "91c2a91fa284e1d45c477a40623bf55d",
+  "name": "pyarrow",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/pyarrow-19.0.1-py310h2ec42d9_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pyarrow",
+  "sha256": "dd0638597f4ef0a7dacc6203ac565cecf0d35305ffdbfd908a1e23775ef090f6",
+  "size": 25313,
+  "subdir": "osx-64",
+  "timestamp": 1739792496000,
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/pyarrow-19.0.1-py310h2ec42d9_0.conda",
+  "version": "19.0.1"
+}

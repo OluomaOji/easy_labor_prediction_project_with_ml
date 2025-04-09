@@ -1,0 +1,82 @@
+Data Head:   case_id continent  ... full_time_positio case_status
+0  EZYV01      Asia  ...                 Y      Denied
+1  EZYV02      Asia  ...                 Y   Certified
+2  EZYV03      Asia  ...                 Y      Denied
+3  EZYV04      Asia  ...                 Y      Denied
+4  EZYV05    Africa  ...                 Y   Certified
+
+[5 rows x 12 columns]
+Data Shape: 
+(25480, 12)
+Data Info: 
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+Data Describe: 
+       ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+Duplicated Values: 
+<bound method Series.sum of 0        False
+1        False
+2        False
+3        False
+4        False
+         ...  
+25475    False
+25476    False
+25477    False
+25478    False
+25479    False
+Length: 25480, dtype: bool>
+Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+Unique Values: 
+case_id                  25480
+continent                    6
+education_of_e               4
+phlaosy_ejeob_experie        2
+rceequires_job_trai          2
+ninog_of_employee         7105
+yr_of_estab                199
+region_of_emplo              5
+pmrevnat iling_wage      25454
+unit_of_wage                 4
+full_time_positio            2
+case_status                  2
+dtype: int64
