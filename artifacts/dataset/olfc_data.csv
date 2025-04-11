@@ -1,4 +1,4 @@
-case_id,continent,education_of_e,phlaosy_ejeob_experie,rceequires_job_trai,ninog_of_employee,yr_of_estab,region_of_emplo,pmrevnat iling_wage,unit_of_wage,full_time_positio,case_status
+case_id,continent,education_of_employee,has_job_experience,requires_job_training,no_of_employees,yr_of_estab,region_of_employment,prevailing_wage,unit_of_wage,full_time_position,case_status
 EZYV01,Asia,High School,N,N,14513,2007,West,592.2029,Hour,Y,Denied
 EZYV02,Asia,Master's,Y,N,2412,2002,Northeast,83425.65,Year,Y,Certified
 EZYV03,Asia,Bachelor's,N,Y,44444,2008,West,122996.86,Year,Y,Denied
