@@ -1411,3 +1411,24 @@ Name: count, dtype: int64
 2025-04-11 09:43:20,801-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
 2025-04-11 09:43:20,801-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
 2025-04-11 09:43:20,805-__main__-INFO-Feature Engineering Process Completed...
+2025-04-11 10:32:26,294-__main__-INFO-EDA processing initialising......
+2025-04-11 10:32:26,294-__main__-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-11 10:32:26,296-src.exception-ERROR-Error Message: [Errno 2] No such file or directory: 'artifacts/dataset/olfc_data.csv'
+2025-04-11 10:32:26,401-src.exception-ERROR-Error Details: (<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x11e215a80>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/2_EDA.py", line 30, in initialising_eda
+    df = pd.read_csv(self.EDA_config.data_path)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/dataset/olfc_data.csv'
+
+2025-04-11 10:32:59,574-__main__-INFO-Starting data ingestion process....
+2025-04-11 10:35:59,667-__main__-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-11 10:35:59,680-__main__-INFO-Data Ingestion Completed

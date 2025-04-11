@@ -46,7 +46,6 @@ class EDA:
             logging.info(f"Duplicated Values: {df.duplicated().sum()}")
             logging.info(f"Missing Values: \n{df.isnull().sum()}")
             logging.info(f"Unique Values: \n{df.nunique()}")
-            logging.info(f"Unique Values in Case Status: \n{df['case_status'].value_counts()}")
 
             eda_path = self.EDA_config.out_dir
             with open(eda_path,'w') as f:
