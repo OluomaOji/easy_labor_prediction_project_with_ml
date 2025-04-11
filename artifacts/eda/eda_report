@@ -80,3 +80,8 @@ unit_of_wage                 4
 full_time_positio            2
 case_status                  2
 dtype: int64
+Number of Unique Categories in Case Status: 
+case_status
+Certified    17018
+Denied        8462
+Name: count, dtype: int64

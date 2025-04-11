@@ -355,3 +355,1059 @@ case_status                  2
 dtype: int64
 2025-04-09 20:31:09,783-__main__-INFO-EDA Summary saved to: artifacts/eda/eda_report
 2025-04-09 20:31:09,786-__main__-INFO-EDA Process Completed
+2025-04-10 09:50:17,526-__main__-INFO-EDA processing initialising......
+2025-04-10 09:50:17,527-__main__-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-10 09:50:17,633-__main__-INFO-Data loaded successfully loaded
+2025-04-10 09:50:17,668-__main__-INFO-Generating the EDA Summary
+2025-04-10 09:50:17,702-__main__-INFO-Data Head:   case_id continent  ... full_time_positio case_status
+0  EZYV01      Asia  ...                 Y      Denied
+1  EZYV02      Asia  ...                 Y   Certified
+2  EZYV03      Asia  ...                 Y      Denied
+3  EZYV04      Asia  ...                 Y      Denied
+4  EZYV05    Africa  ...                 Y   Certified
+
+[5 rows x 12 columns]
+2025-04-10 09:50:17,702-__main__-INFO-Data Shape: (25480, 12)
+2025-04-10 09:50:17,702-__main__-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-10 09:50:17,738-__main__-INFO-Data Describe:        ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+2025-04-10 09:50:17,765-__main__-INFO-Duplicated Values: 0
+2025-04-10 09:50:17,777-__main__-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+2025-04-10 09:50:17,809-__main__-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_e               4
+phlaosy_ejeob_experie        2
+rceequires_job_trai          2
+ninog_of_employee         7105
+yr_of_estab                199
+region_of_emplo              5
+pmrevnat iling_wage      25454
+unit_of_wage                 4
+full_time_positio            2
+case_status                  2
+dtype: int64
+2025-04-10 09:50:17,811-__main__-INFO-Unique Values in Case Status: 
+2
+2025-04-10 09:50:17,909-__main__-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-10 09:50:17,911-__main__-INFO-EDA Process Completed
+2025-04-10 09:51:44,376-__main__-INFO-EDA processing initialising......
+2025-04-10 09:51:44,377-__main__-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-10 09:51:44,502-__main__-INFO-Data loaded successfully loaded
+2025-04-10 09:51:44,534-__main__-INFO-Generating the EDA Summary
+2025-04-10 09:51:44,565-__main__-INFO-Data Head:   case_id continent  ... full_time_positio case_status
+0  EZYV01      Asia  ...                 Y      Denied
+1  EZYV02      Asia  ...                 Y   Certified
+2  EZYV03      Asia  ...                 Y      Denied
+3  EZYV04      Asia  ...                 Y      Denied
+4  EZYV05    Africa  ...                 Y   Certified
+
+[5 rows x 12 columns]
+2025-04-10 09:51:44,566-__main__-INFO-Data Shape: (25480, 12)
+2025-04-10 09:51:44,566-__main__-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-10 09:51:44,600-__main__-INFO-Data Describe:        ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+2025-04-10 09:51:44,628-__main__-INFO-Duplicated Values: 0
+2025-04-10 09:51:44,643-__main__-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+2025-04-10 09:51:44,669-__main__-INFO-Unique Values: 
+58265
+2025-04-10 09:51:44,672-__main__-INFO-Unique Values in Case Status: 
+2
+2025-04-10 09:51:44,783-__main__-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-10 09:51:44,788-__main__-INFO-EDA Process Completed
+2025-04-10 09:53:47,458-__main__-INFO-EDA processing initialising......
+2025-04-10 09:53:47,460-__main__-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-10 09:53:47,587-__main__-INFO-Data loaded successfully loaded
+2025-04-10 09:53:47,623-__main__-INFO-Generating the EDA Summary
+2025-04-10 09:53:47,655-__main__-INFO-Data Head:   case_id continent  ... full_time_positio case_status
+0  EZYV01      Asia  ...                 Y      Denied
+1  EZYV02      Asia  ...                 Y   Certified
+2  EZYV03      Asia  ...                 Y      Denied
+3  EZYV04      Asia  ...                 Y      Denied
+4  EZYV05    Africa  ...                 Y   Certified
+
+[5 rows x 12 columns]
+2025-04-10 09:53:47,655-__main__-INFO-Data Shape: (25480, 12)
+2025-04-10 09:53:47,655-__main__-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-10 09:53:47,693-__main__-INFO-Data Describe:        ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+2025-04-10 09:53:47,720-__main__-INFO-Duplicated Values: 0
+2025-04-10 09:53:47,735-__main__-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+2025-04-10 09:53:47,760-__main__-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_e               4
+phlaosy_ejeob_experie        2
+rceequires_job_trai          2
+ninog_of_employee         7105
+yr_of_estab                199
+region_of_emplo              5
+pmrevnat iling_wage      25454
+unit_of_wage                 4
+full_time_positio            2
+case_status                  2
+dtype: int64
+2025-04-10 09:53:47,764-__main__-INFO-Unique Values in Case Status: 
+case_status
+Certified    17018
+Denied        8462
+Name: count, dtype: int64
+2025-04-10 09:53:47,873-__main__-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-10 09:53:47,875-__main__-INFO-EDA Process Completed
+2025-04-10 14:34:18,046-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 14:34:18,220-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 14:34:18,232-src.exception-ERROR-Error Message: 'education_of_employee'
+2025-04-10 14:34:18,347-src.exception-ERROR-Error Details: (<class 'KeyError'>, KeyError('education_of_employee'), <traceback object at 0x13240b740>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'education_of_employee'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 46, in initiate_feature_engineering
+    df['education_of_employee'] = df['education_of_employee'].str.replace("’s", "", regex=False)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'education_of_employee'
+
+2025-04-10 14:38:41,413-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 14:38:41,723-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 14:38:42,106-__main__-INFO-Preprocessing features
+2025-04-10 14:38:42,412-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 14:38:55,434-src.exception-ERROR-Error Message: Shape of passed values is (34036, 1), indices imply (34036, 25505)
+2025-04-10 14:38:56,102-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 1), indices imply (34036, 25505)'), <traceback object at 0x136a388c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 107, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=feature_names)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 867, in __init__
+    mgr = ndarray_to_mgr(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 1), indices imply (34036, 25505)
+
+2025-04-10 14:42:40,813-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 14:42:40,974-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 14:42:41,354-__main__-INFO-Preprocessing features
+2025-04-10 14:42:54,303-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 15:24:02,034-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 15:24:02,655-__main__-INFO-Unique Values in Case Status: 
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-10 17:07:02,417-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 17:07:02,502-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_path
+2025-04-10 17:07:03,249-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 17:28:29,278-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 17:28:29,440-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 17:28:30,050-__main__-INFO-Preprocessing features
+2025-04-10 17:28:46,078-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 18:05:53,453-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 18:05:53,940-__main__-INFO-Unique Values in Case Status: 
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-10 18:50:43,605-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 18:50:43,711-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_path.csv
+2025-04-10 18:50:44,343-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 19:43:13,896-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 19:43:14,615-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 19:43:14,957-__main__-INFO-Preprocessing features
+2025-04-10 19:43:28,050-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 20:19:25,372-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 20:19:25,488-__main__-INFO-Unique Values in Case Status: 
+case_status
+Denied       17018
+Certified    17018
+Name: count, dtype: int64
+2025-04-10 20:51:01,442-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 20:51:01,456-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 20:51:01,859-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 21:29:45,987-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 21:29:46,188-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 21:29:46,480-__main__-INFO-Preprocessing features
+2025-04-10 21:29:46,499-src.exception-ERROR-Error Message: LabelEncoder.fit_transform() takes 2 positional arguments but 3 were given
+2025-04-10 21:29:46,738-src.exception-ERROR-Error Details: (<class 'TypeError'>, TypeError('LabelEncoder.fit_transform() takes 2 positional arguments but 3 were given'), <traceback object at 0x121f22ec0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 93, in initiate_feature_engineering
+    X_preprocessed = preprocessor.fit_transform(X)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 727, in fit_transform
+    result = self._fit_transform(X, y, _fit_transform_one)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 658, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 1088, in __call__
+    while self.dispatch_one_batch(iterator):
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+                   ^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 123, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 893, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 445, in fit_transform
+    return last_step.fit_transform(Xt, y, **fit_params_last_step)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LabelEncoder.fit_transform() takes 2 positional arguments but 3 were given
+
+2025-04-10 22:01:05,557-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:01:05,709-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:01:06,242-__main__-INFO-Preprocessing features
+2025-04-10 22:01:06,277-src.exception-ERROR-Error Message: could not convert string to float: 'EZYV01'
+2025-04-10 22:01:06,804-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError("could not convert string to float: 'EZYV01'"), <traceback object at 0x12f522d40>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 96, in initiate_feature_engineering
+    X_preprocessed = preprocessor.fit_transform(X)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 727, in fit_transform
+    result = self._fit_transform(X, y, _fit_transform_one)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 658, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 1085, in __call__
+    if self.dispatch_one_batch(iterator):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+                   ^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 123, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 893, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 445, in fit_transform
+    return last_step.fit_transform(Xt, y, **fit_params_last_step)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 427, in fit
+    return self.partial_fit(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 466, in partial_fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 565, in _validate_data
+    X = check_array(X, input_name="X", **check_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'EZYV01'
+
+2025-04-10 22:03:38,791-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:03:38,926-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:03:39,384-__main__-INFO-Preprocessing features
+2025-04-10 22:03:39,433-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:03:39,950-src.exception-ERROR-Error Message: input_features is not equal to feature_names_in_
+2025-04-10 22:03:39,969-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('input_features is not equal to feature_names_in_'), <traceback object at 0x1089e9600>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    preprocessor.named_transformers_['num'].get_feature_names_out(numerical_cols).tolist() +
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 756, in get_feature_names_out
+    feature_names_out = transform.get_feature_names_out(feature_names_out)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 911, in get_feature_names_out
+    return _check_feature_names_in(self, input_features)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1954, in _check_feature_names_in
+    raise ValueError("input_features is not equal to feature_names_in_")
+ValueError: input_features is not equal to feature_names_in_
+
+2025-04-10 22:11:54,110-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:11:54,711-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:11:55,327-__main__-INFO-Preprocessing features
+2025-04-10 22:11:55,338-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:11:55,502-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 11)
+2025-04-10 22:11:56,082-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 11)'), <traceback object at 0x129f65a00>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 103, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=feature_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 11)
+
+2025-04-10 22:15:44,545-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:15:44,927-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:15:45,448-__main__-INFO-Preprocessing features
+2025-04-10 22:15:45,465-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:15:45,648-src.exception-ERROR-Error Message: 'cat'
+2025-04-10 22:15:45,651-src.exception-ERROR-Error Details: (<class 'KeyError'>, KeyError('cat'), <traceback object at 0x125cb76c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 104, in initiate_feature_engineering
+    preprocessor.named_transformers_['cat'].get_feature_names_out(categorical_cols).tolist()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'cat'
+
+2025-04-10 22:21:22,274-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:21:22,392-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:21:22,795-__main__-INFO-Preprocessing features
+2025-04-10 22:21:22,813-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:21:27,042-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 22:21:27,053-__main__-INFO-Unique Values in Case Status: 
+case_status
+Denied       17018
+Certified    17018
+Name: count, dtype: int64
+2025-04-10 22:21:40,485-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 22:21:40,486-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 22:21:40,494-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 22:22:57,041-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:22:57,204-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:22:57,666-__main__-INFO-Preprocessing features
+2025-04-10 22:22:57,686-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:22:58,370-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 22:22:58,381-__main__-INFO-Unique Values in Case Status: 
+case_status
+Denied       17018
+Certified    17018
+Name: count, dtype: int64
+2025-04-10 22:22:58,975-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 22:22:58,976-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 22:22:58,984-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 22:24:38,675-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:24:38,831-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:24:39,270-__main__-INFO-Preprocessing features
+2025-04-10 22:24:39,292-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:24:39,439-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 11)
+2025-04-10 22:24:39,459-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 11)'), <traceback object at 0x12b7155c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=feature_names)  # Adjust the column slice
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 11)
+
+2025-04-10 22:31:27,682-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:31:27,804-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:31:28,307-__main__-INFO-Preprocessing features
+2025-04-10 22:31:28,334-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:31:28,495-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 11)
+2025-04-10 22:31:28,520-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 11)'), <traceback object at 0x12d23d9c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=numerical_cols)  # Adjust the column slice
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 11)
+
+2025-04-10 22:47:57,396-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:47:57,581-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:47:57,950-__main__-INFO-Preprocessing features
+2025-04-10 22:47:57,978-src.exception-ERROR-Error Message: 'LabelEncoder' object is not callable
+2025-04-10 22:47:58,061-src.exception-ERROR-Error Details: (<class 'TypeError'>, TypeError("'LabelEncoder' object is not callable"), <traceback object at 0x1286cfa80>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 96, in initiate_feature_engineering
+    X_preprocessed = preprocessor.fit_transform(X)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 727, in fit_transform
+    result = self._fit_transform(X, y, _fit_transform_one)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 658, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 1088, in __call__
+    while self.dispatch_one_batch(iterator):
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+                   ^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 123, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 893, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_function_transformer.py", line 238, in transform
+    return self._transform(X, func=self.func, kw_args=self.kw_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_function_transformer.py", line 310, in _transform
+    return func(X, **(kw_args if kw_args else {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 91, in <lambda>
+    ("cat", FunctionTransformer(lambda x: le(x, categorical_cols), validate=False), categorical_cols)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'LabelEncoder' object is not callable
+
+2025-04-10 22:54:30,124-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:54:30,255-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:54:30,734-__main__-INFO-Preprocessing features
+2025-04-10 22:54:30,757-src.exception-ERROR-Error Message: 'LabelEncoder' object is not callable
+2025-04-10 22:54:30,785-src.exception-ERROR-Error Details: (<class 'TypeError'>, TypeError("'LabelEncoder' object is not callable"), <traceback object at 0x12aae7b40>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 96, in initiate_feature_engineering
+    X_preprocessed = preprocessor.fit_transform(X)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 727, in fit_transform
+    result = self._fit_transform(X, y, _fit_transform_one)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/compose/_column_transformer.py", line 658, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 1088, in __call__
+    while self.dispatch_one_batch(iterator):
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+                   ^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/joblib/parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/parallel.py", line 123, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/pipeline.py", line 893, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_function_transformer.py", line 238, in transform
+    return self._transform(X, func=self.func, kw_args=self.kw_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_function_transformer.py", line 310, in _transform
+    return func(X, **(kw_args if kw_args else {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 91, in <lambda>
+    ("cat", FunctionTransformer(lambda x: le(x, categorical_cols), validate=False), categorical_cols)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'LabelEncoder' object is not callable
+
+2025-04-10 22:56:24,143-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 22:56:24,263-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 22:56:24,699-__main__-INFO-Preprocessing features
+2025-04-10 22:56:24,717-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 22:56:24,861-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 11)
+2025-04-10 22:56:24,882-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 11)'), <traceback object at 0x12a3bd800>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=numerical_cols)  # Adjust the column slice
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 11)
+
+2025-04-10 23:03:36,903-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:03:37,038-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:03:37,433-__main__-INFO-Preprocessing features
+2025-04-10 23:03:37,460-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:03:37,599-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 2)
+2025-04-10 23:03:37,619-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 2)'), <traceback object at 0x12b83a5c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=numerical_cols)  # Adjust the column slice
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 2)
+
+2025-04-10 23:06:40,074-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:06:40,253-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:06:40,722-__main__-INFO-Preprocessing features
+2025-04-10 23:06:40,735-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:06:40,876-src.exception-ERROR-Error Message: operands could not be broadcast together with shapes (34036,3) (34036,) 
+2025-04-10 23:06:41,209-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('operands could not be broadcast together with shapes (34036,3) (34036,) '), <traceback object at 0x127c6d980>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 102, in initiate_feature_engineering
+    total_cols = X_balanced + y_balanced
+                 ~~~~~~~~~~~^~~~~~~~~~~~
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2102, in __array_ufunc__
+    return arraylike.array_ufunc(self, ufunc, method, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/arraylike.py", line 273, in array_ufunc
+    result = maybe_dispatch_ufunc_to_dunder_op(self, ufunc, method, *inputs, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "ops_dispatch.pyx", line 113, in pandas._libs.ops_dispatch.maybe_dispatch_ufunc_to_dunder_op
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/arraylike.py", line 190, in __radd__
+    return self._arith_method(other, roperator.radd)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/series.py", line 5819, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/base.py", line 1381, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/ops/array_ops.py", line 285, in arithmetic_op
+    res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/ops/array_ops.py", line 220, in _na_arithmetic_op
+    result = func(left, right)
+             ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py", line 242, in evaluate
+    return _evaluate(op, op_str, a, b)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py", line 131, in _evaluate_numexpr
+    result = _evaluate_standard(op, op_str, a, b)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py", line 73, in _evaluate_standard
+    return op(a, b)
+           ^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/roperator.py", line 11, in radd
+    return right + left
+           ~~~~~~^~~~~~
+ValueError: operands could not be broadcast together with shapes (34036,3) (34036,) 
+
+2025-04-10 23:09:37,331-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:09:37,460-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:09:37,921-__main__-INFO-Preprocessing features
+2025-04-10 23:09:37,939-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:09:38,078-src.exception-ERROR-Error Message: Shape of passed values is (34036, 3), indices imply (34036, 11)
+2025-04-10 23:09:38,102-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Shape of passed values is (34036, 3), indices imply (34036, 11)'), <traceback object at 0x123db1c80>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 105, in initiate_feature_engineering
+    X_df = pd.DataFrame(X_balanced, columns=numerical_cols)  # Adjust the column slice
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 336, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (34036, 3), indices imply (34036, 11)
+
+2025-04-10 23:11:58,541-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:11:58,683-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:11:59,111-__main__-INFO-Preprocessing features
+2025-04-10 23:11:59,127-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:11:59,271-src.exception-ERROR-Error Message: name 'y_resampled' is not defined
+2025-04-10 23:11:59,275-src.exception-ERROR-Error Details: (<class 'NameError'>, NameError("name 'y_resampled' is not defined"), <traceback object at 0x12a315e00>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 103, in initiate_feature_engineering
+    balanced_df = pd.concat([pd.DataFrame(X_balanced), pd.Series(y_resampled, name=target_col)], axis=1)
+                                                                 ^^^^^^^^^^^
+NameError: name 'y_resampled' is not defined
+
+2025-04-10 23:12:24,598-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:12:24,755-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:12:25,183-__main__-INFO-Preprocessing features
+2025-04-10 23:12:25,200-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:12:25,804-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 23:12:25,810-__main__-INFO-Unique Values in Case Status: 
+case_status
+Denied       17018
+Certified    17018
+Name: count, dtype: int64
+2025-04-10 23:12:25,873-src.exception-ERROR-Error Message: too many values to unpack (expected 2)
+2025-04-10 23:12:25,878-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('too many values to unpack (expected 2)'), <traceback object at 0x125a4f240>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 111, in initiate_feature_engineering
+    train_df, test_df = train_test_split(
+    ^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+
+2025-04-10 23:14:35,569-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:14:35,712-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:14:36,116-__main__-INFO-Preprocessing features
+2025-04-10 23:14:36,130-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:14:36,532-__main__-INFO-Balanced dataset saved to: artifacts/feature_eng/processed_data.csv
+2025-04-10 23:14:36,547-__main__-INFO-Unique Values in Case Status: 
+case_status
+Denied       17018
+Certified    17018
+Name: count, dtype: int64
+2025-04-10 23:14:36,865-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 23:14:36,865-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 23:14:36,871-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 23:19:41,192-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:19:41,311-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:19:41,779-__main__-INFO-Preprocessing features
+2025-04-10 23:19:41,803-__main__-INFO-Applying SMOTE for class balancing
+2025-04-10 23:19:41,961-src.exception-ERROR-Error Message: Index data must be 1-dimensional
+2025-04-10 23:19:42,277-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError('Index data must be 1-dimensional'), <traceback object at 0x130cd2100>)Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 560, in __new__
+    arr = sanitize_array(data, None, dtype=dtype, copy=copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/construction.py", line 658, in sanitize_array
+    subarr = _sanitize_ndim(subarr, data, dtype, index, allow_2d=allow_2d)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/construction.py", line 717, in _sanitize_ndim
+    raise ValueError(
+ValueError: Data must be 1-dimensional, got ndarray of shape (25480, 11) instead
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 103, in initiate_feature_engineering
+    balanced_df = pd.concat([pd.DataFrame(X_balanced,columns=X), pd.Series(y_balanced, name=target_col)], axis=1)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 782, in __init__
+    mgr = ndarray_to_mgr(
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 332, in ndarray_to_mgr
+    index, columns = _get_axes(
+                     ^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/internals/construction.py", line 756, in _get_axes
+    columns = ensure_index(columns)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 7577, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 527, in __new__
+    return Index(np.asarray(data), dtype=dtype, copy=copy, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 565, in __new__
+    raise ValueError("Index data must be 1-dimensional") from err
+ValueError: Index data must be 1-dimensional
+
+2025-04-10 23:34:53,860-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:34:54,128-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:34:54,524-src.exception-ERROR-Error Message: could not convert string to float: 'EZYV7232'
+2025-04-10 23:34:54,554-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError("could not convert string to float: 'EZYV7232'"), <traceback object at 0x130c62440>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 82, in initiate_feature_engineering
+    X_train_scaled = scaler.fit_transform(X_train)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 427, in fit
+    return self.partial_fit(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 466, in partial_fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 565, in _validate_data
+    X = check_array(X, input_name="X", **check_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'EZYV7232'
+
+2025-04-10 23:43:59,617-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:43:59,724-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:44:00,057-src.exception-ERROR-Error Message: could not convert string to float: 'Year'
+2025-04-10 23:44:00,086-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError("could not convert string to float: 'Year'"), <traceback object at 0x1296ade80>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 85, in initiate_feature_engineering
+    X[numeric_columns] = scaler.fit_transform(X[numeric_columns])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 427, in fit
+    return self.partial_fit(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 466, in partial_fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 565, in _validate_data
+    X = check_array(X, input_name="X", **check_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Year'
+
+2025-04-10 23:51:39,483-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:51:39,653-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:51:39,915-src.exception-ERROR-Error Message: could not convert string to float: 'Hour'
+2025-04-10 23:51:39,945-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError("could not convert string to float: 'Hour'"), <traceback object at 0x12ad01dc0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 65, in initiate_feature_engineering
+    X[numeric_columns] = scaler.fit_transform(X[numeric_columns])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 878, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 427, in fit
+    return self.partial_fit(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 466, in partial_fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 565, in _validate_data
+    X = check_array(X, input_name="X", **check_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Hour'
+
+2025-04-10 23:52:37,753-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:52:37,953-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:52:38,106-src.exception-ERROR-Error Message: could not convert string to float: 'EZYV7232'
+2025-04-10 23:52:38,255-src.exception-ERROR-Error Details: (<class 'ValueError'>, ValueError("could not convert string to float: 'EZYV7232'"), <traceback object at 0x12b764740>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 84, in initiate_feature_engineering
+    X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/imblearn/base.py", line 106, in fit_resample
+    X, y, binarize_y = self._check_X_y(X, y)
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/imblearn/base.py", line 161, in _check_X_y
+    X, y = self._validate_data(X, y, reset=True, accept_sparse=accept_sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 584, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1106, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 2084, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'EZYV7232'
+
+2025-04-10 23:53:20,629-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:53:20,752-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:53:21,266-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 23:53:21,267-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 23:53:21,270-__main__-INFO-Feature Engineering Process Completed...
+2025-04-10 23:57:17,353-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-10 23:57:17,521-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-10 23:57:17,771-__main__-INFO-Value counts of the resampled target variable (case_status):
+case_status
+0    11899
+1    11899
+Name: count, dtype: int64
+2025-04-10 23:57:17,994-__main__-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-10 23:57:19,094-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-10 23:57:19,098-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-10 23:57:19,116-__main__-INFO-Feature Engineering Process Completed...
+2025-04-11 00:00:58,308-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-11 00:00:58,429-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-11 00:00:58,820-__main__-INFO-Value counts of the resampled target variable (case_status):
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-11 00:00:59,152-__main__-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-11 00:00:59,785-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-11 00:00:59,785-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-11 00:00:59,790-__main__-INFO-Feature Engineering Process Completed...
+2025-04-11 09:29:23,437-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-11 09:29:23,697-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-11 09:29:23,804-src.exception-ERROR-Error Message: 'region_of_emploment'
+2025-04-11 09:29:23,883-src.exception-ERROR-Error Details: (<class 'KeyError'>, KeyError('region_of_emploment'), <traceback object at 0x1285fde00>)Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'region_of_emploment'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/4_feature_engineering.py", line 60, in initiate_feature_engineering
+    X[column] = label_encoder.fit_transform(X[column])
+                                            ~^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'region_of_emploment'
+
+2025-04-11 09:30:20,729-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-11 09:30:20,929-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-11 09:30:21,570-__main__-INFO-Value counts of the resampled target variable (case_status):
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-11 09:30:22,104-__main__-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-11 09:30:22,551-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-11 09:30:22,551-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-11 09:30:22,568-__main__-INFO-Feature Engineering Process Completed...
+2025-04-11 09:43:19,834-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-11 09:43:19,961-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-11 09:43:20,195-__main__-INFO-Value counts of the resampled target variable (case_status):
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-11 09:43:20,485-__main__-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-11 09:43:20,801-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-11 09:43:20,801-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-11 09:43:20,805-__main__-INFO-Feature Engineering Process Completed...

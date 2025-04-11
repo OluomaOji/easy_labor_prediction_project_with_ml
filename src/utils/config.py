@@ -13,3 +13,10 @@ class DataIngestionConfig:
 class EDAConfig:
     data_path: str=os.path.join('artifacts','dataset','olfc_data.csv')
     out_dir: str=os.path.join('artifacts','eda','eda_report')
+
+@dataclass
+class FeatureEngineeringConfig:
+    data_path: str=os.path.join('artifacts','dataset','olfc_data.csv')
+    output_path: str=os.path.join('artifacts','feature_eng','processed_data.csv')
+    train_path: str=os.path.join('artifacts','feature_eng','train_data.csv')
+    test_path: str=os.path.join('artifacts','feature_eng','test_data.csv')

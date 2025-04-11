@@ -4,4 +4,6 @@ matplotlib
 seaborn
 scikit-learn
 tabula-py
+imblearn
 mlflow
+dvc
