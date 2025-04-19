@@ -1865,3 +1865,122 @@ weighted avg       0.75      0.75      0.75      6808
 Best Model: Xgboost with ROC-AUC: 0.8752
 2025-04-11 18:39:21,150-__main__-INFO-Best model saved to: artifacts/model.pkl
 2025-04-11 18:39:21,155-__main__-INFO-Model Training Process Completed...
+2025-04-13 20:53:58,552-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 20:53:58,577-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 20:55:49,458-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 20:55:49,472-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 21:00:25,843-src.exception-ERROR-Error Message: API request to https://dagshub.com/OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get?experiment_id=None (Caused by ResponseError('too many 500 error responses'))
+2025-04-13 21:00:25,897-src.exception-ERROR-Error Details: (<class 'mlflow.exceptions.MlflowException'>, MlflowException("API request to https://dagshub.com/OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get?experiment_id=None (Caused by ResponseError('too many 500 error responses'))"), <traceback object at 0x12784f680>)urllib3.exceptions.ResponseError: too many 500 error responses
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  [Previous line repeated 4 more times]
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/urllib3/connectionpool.py", line 932, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get?experiment_id=None (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 181, in http_request
+    return _get_http_response_with_retries(
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/utils/request_utils.py", line 237, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/requests/adapters.py", line 691, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get?experiment_id=None (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/5_hyperparameter_tuning.py", line 85, in initiate_hyperparameter_tuning
+    mlflow.set_experiment("XGBoost_Hyperparameter_Tuning")
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 172, in set_experiment
+    experiment = client.get_experiment(experiment_id)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/tracking/client.py", line 1664, in get_experiment
+    return self._tracking_client.get_experiment(experiment_id)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 576, in get_experiment
+    return self.store.get_experiment(experiment_id)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 149, in get_experiment
+    response_proto = self._call_endpoint(GetExperiment, req_body)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 90, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 387, in call_endpoint
+    response = http_request(**call_kwargs)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 204, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to https://dagshub.com/OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow/experiments/get?experiment_id=None (Caused by ResponseError('too many 500 error responses'))
+
+2025-04-13 21:04:55,995-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 21:04:56,005-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 21:05:29,992-src.exception-ERROR-Error Message: 'HyperparameterTuning' object has no attribute 'model_training_config'
+2025-04-13 21:05:29,996-src.exception-ERROR-Error Details: (<class 'AttributeError'>, AttributeError("'HyperparameterTuning' object has no attribute 'model_training_config'"), <traceback object at 0x129609c80>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/5_hyperparameter_tuning.py", line 84, in initiate_hyperparameter_tuning
+    os.environ["MLFLOW_TRACKING_URI"] = self.model_training_config.MLFLOW_TRACKING_URI
+AttributeError: 'HyperparameterTuning' object has no attribute 'model_training_config'
+
+2025-04-13 21:06:53,177-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 21:06:53,200-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 21:07:50,690-__main__-INFO-ROC-AUC on Test Data: 0.8806
+2025-04-13 21:07:50,691-__main__-INFO-Best Parameters: {'subsample': 0.8, 'reg_lambda': 2, 'reg_alpha': 1, 'n_estimators': 100, 'max_depth': 7, 'learning_rate': 0.2, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-13 21:07:51,052-src.exception-ERROR-Error Message: 'HyperparameterTuning' object has no attribute 'config'
+2025-04-13 21:07:51,055-src.exception-ERROR-Error Details: (<class 'AttributeError'>, AttributeError("'HyperparameterTuning' object has no attribute 'config'"), <traceback object at 0x12a565600>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/5_hyperparameter_tuning.py", line 112, in initiate_hyperparameter_tuning
+    dump(best_model, self.config.best_model)
+AttributeError: 'HyperparameterTuning' object has no attribute 'config'
+
+2025-04-13 21:09:09,739-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 21:09:09,762-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 21:10:16,401-__main__-INFO-ROC-AUC on Test Data: 0.8806
+2025-04-13 21:10:16,404-__main__-INFO-Best Parameters: {'subsample': 0.8, 'reg_lambda': 2, 'reg_alpha': 1, 'n_estimators': 100, 'max_depth': 7, 'learning_rate': 0.2, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-13 21:10:16,811-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-13 21:10:16,817-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
+2025-04-13 21:15:30,871-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-13 21:15:30,890-__main__-INFO-Starting hyperparameter tuning...
+2025-04-13 21:18:11,082-__main__-INFO-ROC-AUC on Test Data: 0.8841
+2025-04-13 21:18:11,084-__main__-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-13 21:18:11,574-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-13 21:18:11,598-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
+2025-04-15 20:31:55,878-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-15 20:31:55,900-__main__-INFO-Starting hyperparameter tuning...
+2025-04-15 20:34:37,085-__main__-INFO-ROC-AUC on Test Data: 0.8841
+2025-04-15 20:34:37,088-__main__-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-15 20:34:37,944-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-15 20:34:37,961-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
+2025-04-15 20:40:46,077-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-15 20:40:46,144-__main__-INFO-Starting hyperparameter tuning...
+2025-04-15 20:42:23,762-src.exception-ERROR-Error Message: 'HyperparameterTuning' object has no attribute 'model_training_config'
+2025-04-15 20:42:23,767-src.exception-ERROR-Error Details: (<class 'AttributeError'>, AttributeError("'HyperparameterTuning' object has no attribute 'model_training_config'"), <traceback object at 0x12a9530c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/5_hyperparameter_tuning.py", line 89, in initiate_hyperparameter_tuning
+    mlflow_tracking_uri = self.model_training_config.MLFLOW_TRACKING_URI
+AttributeError: 'HyperparameterTuning' object has no attribute 'model_training_config'
+
+2025-04-15 20:43:51,183-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-15 20:43:51,204-__main__-INFO-Starting hyperparameter tuning...
+2025-04-15 20:45:40,907-src.exception-ERROR-Error Message: 'RandomizedSearchCV' object has no attribute 'items'
+2025-04-15 20:45:40,914-src.exception-ERROR-Error Details: (<class 'AttributeError'>, AttributeError("'RandomizedSearchCV' object has no attribute 'items'"), <traceback object at 0x12c3e78c0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/5_hyperparameter_tuning.py", line 94, in initiate_hyperparameter_tuning
+    for model_name, model in model.items():
+AttributeError: 'RandomizedSearchCV' object has no attribute 'items'
+
+2025-04-15 20:49:53,083-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-15 20:49:53,105-__main__-INFO-Starting hyperparameter tuning...
+2025-04-15 20:52:10,930-__main__-INFO-ROC-AUC on Test Data: 0.8841
+2025-04-15 20:52:10,932-__main__-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-15 20:52:11,416-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-15 20:52:11,434-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
