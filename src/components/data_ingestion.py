@@ -24,8 +24,8 @@ class DataIngestion:
         try:
             
             logging.info("Starting data ingestion process....")
-            tabula.read_pdf(self.data_ingestion_config.raw_data_path,pages="all")
-            tabula.convert_into(self.data_ingestion_config.raw_data_path,self.data_ingestion_config.data_path,pages="all",output_format="csv")
+            df=pd.read_csv('data/raw/olfc_data.csv')
+            df.to_csv(self.data_ingestion_config.data_path,index=False,header=True)
             logging.info(f"Data saved to CSV at: {self.data_ingestion_config.data_path}")
 
             return self.data_ingestion_config.data_path

@@ -20,6 +20,9 @@ class FeatureEngineeringConfig:
     output_path: str=os.path.join('artifacts','feature_eng','processed_data.csv')
     train_path: str=os.path.join('artifacts','feature_eng','train_data.csv')
     test_path: str=os.path.join('artifacts','feature_eng','test_data.csv')
+    label_encoder_pkl: str=os.path.join('artifacts','label_encoders.pkl')
+    scaler_pkl: str=os.path.join('artifacts','scaler.pkl')
+    target_encoder_pkl: str=os.path.join('artifacts','target_encoder.pkl')
 
 @dataclass
 class ModelTrainingConfig:
@@ -30,7 +33,7 @@ class ModelTrainingConfig:
     MLFLOW_TRACKING_PASSWORD: str = "760c90844a305272f1981be1879bceef551c3385"
     train_path: str=os.path.join('artifacts','feature_eng','train_data.csv')# Path to the training data file.
     test_path: str=os.path.join('artifacts','feature_eng','test_data.csv') # Path to the testing data file.
-    best_model: str=os.path.join('artifacts','model.pkl') # Path to save the best model after training.
+    best_model: str=os.path.join('artifacts','1_model.pkl') # Path to save the best model after training.
 
 @dataclass
 class HyperParameterTuningConfig:
