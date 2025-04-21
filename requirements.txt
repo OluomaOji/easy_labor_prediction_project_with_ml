@@ -7,7 +7,17 @@ imblearn
 xgboost
 tensorflow
 mlflow
+<<<<<<< HEAD
 fastapi 
 uvicorn
 pydantic
+=======
+fastapi
+uvicorn
+joblib
+pyngrok
+nest_asyncio
+
+
+>>>>>>> c4b33cfb830db53a34002ed9befb0563cd841d03
 
