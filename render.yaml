@@ -1,4 +1,4 @@
-services:
+gservices:
   - type: web
     name: easy-labor-api
     env: python
