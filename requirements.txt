@@ -8,4 +8,11 @@ imblearn
 xgboost
 tensorflow
 mlflow
+fastapi
+uvicorn
+joblib
+pyngrok
+nest_asyncio
+
+
 
