@@ -1984,3 +1984,981 @@ AttributeError: 'RandomizedSearchCV' object has no attribute 'items'
 2025-04-15 20:52:10,932-__main__-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
 2025-04-15 20:52:11,416-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
 2025-04-15 20:52:11,434-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
+2025-04-19 19:07:52,262-__main__-INFO-Training and Test Data Loaded Successfully
+2025-04-19 19:07:53,369-__main__-INFO-
+======= Training Model: Logistic Regression ======
+2025-04-19 19:07:56,603-__main__-INFO-Model: Logistic Regression | Accuracy: 0.6933 | Precision: 0.6943Recall: 0.6853F1: 0.6897 | ROC-AUC: 0.747766167854514
+2025-04-19 19:07:56,605-__main__-INFO-Confusion Matrix:
+[[2399 1022]
+ [1066 2321]]
+2025-04-19 19:07:56,605-__main__-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.69      0.70      0.70      3421
+           1       0.69      0.69      0.69      3387
+
+    accuracy                           0.69      6808
+   macro avg       0.69      0.69      0.69      6808
+weighted avg       0.69      0.69      0.69      6808
+
+2025-04-19 19:08:31,641-__main__-INFO-
+======= Training Model: Decision Tree Classifier ======
+2025-04-19 19:08:34,853-__main__-INFO-Model: Decision Tree Classifier | Accuracy: 0.7306 | Precision: 0.7253Recall: 0.7381F1: 0.7316 | ROC-AUC: 0.7306483418770138
+2025-04-19 19:08:34,854-__main__-INFO-Confusion Matrix:
+[[2474  947]
+ [ 887 2500]]
+2025-04-19 19:08:34,855-__main__-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.74      0.72      0.73      3421
+           1       0.73      0.74      0.73      3387
+
+    accuracy                           0.73      6808
+   macro avg       0.73      0.73      0.73      6808
+weighted avg       0.73      0.73      0.73      6808
+
+2025-04-19 19:08:57,145-__main__-INFO-
+======= Training Model: Xgboost ======
+2025-04-19 19:09:00,556-__main__-INFO-Model: Xgboost | Accuracy: 0.7923 | Precision: 0.8119Recall: 0.7582F1: 0.7841 | ROC-AUC: 0.8752267965440708
+2025-04-19 19:09:00,556-__main__-INFO-Confusion Matrix:
+[[2826  595]
+ [ 819 2568]]
+2025-04-19 19:09:00,557-__main__-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.78      0.83      0.80      3421
+           1       0.81      0.76      0.78      3387
+
+    accuracy                           0.79      6808
+   macro avg       0.79      0.79      0.79      6808
+weighted avg       0.79      0.79      0.79      6808
+
+2025-04-19 19:09:21,139-__main__-INFO-
+======= Training Model: LSTM ======
+2025-04-19 19:11:20,083-__main__-INFO-Model: LSTM | Accuracy: 0.7474 | Precision: 0.7721Recall: 0.6983F1: 0.7333 | ROC-AUC: 0.8145964844690916
+2025-04-19 19:11:20,094-__main__-INFO-Confusion Matrix:
+[[2723  698]
+ [1022 2365]]
+2025-04-19 19:11:20,094-__main__-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.73      0.80      0.76      3421
+           1       0.77      0.70      0.73      3387
+
+    accuracy                           0.75      6808
+   macro avg       0.75      0.75      0.75      6808
+weighted avg       0.75      0.75      0.75      6808
+
+2025-04-19 19:12:22,561-__main__-INFO-
+Best Model: Xgboost with ROC-AUC: 0.8752
+2025-04-19 19:12:22,582-__main__-INFO-Best model saved to: artifacts/model.pkl
+2025-04-19 19:12:22,587-__main__-INFO-Model Training Process Completed...
+2025-04-19 19:14:07,054-__main__-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-19 19:14:07,081-__main__-INFO-Starting hyperparameter tuning...
+2025-04-19 19:16:10,928-__main__-INFO-ROC-AUC on Test Data: 0.8841
+2025-04-19 19:16:10,929-__main__-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-19 19:16:11,538-__main__-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-19 19:16:11,554-__main__-INFO-XGBoost Hyperparameter Tuning Completed...
+2025-04-19 19:41:57,868-__main__-INFO-Starting the Data Ingestion Process
+2025-04-19 19:41:57,870-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-19 19:44:39,107-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-19 19:44:39,122-__main__-INFO-Data Ingestion Completed
+2025-04-19 19:44:39,122-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-19 19:44:39,126-src.components.EDA-INFO-EDA processing initialising......
+2025-04-19 19:44:39,126-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-19 19:44:40,662-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-19 19:44:40,756-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-19 19:44:40,897-src.components.EDA-INFO-Data Head:   case_id continent  ... full_time_positio case_status
+0  EZYV01      Asia  ...                 Y      Denied
+1  EZYV02      Asia  ...                 Y   Certified
+2  EZYV03      Asia  ...                 Y      Denied
+3  EZYV04      Asia  ...                 Y      Denied
+4  EZYV05    Africa  ...                 Y   Certified
+
+[5 rows x 12 columns]
+2025-04-19 19:44:40,900-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-19 19:44:40,901-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-19 19:44:40,961-src.components.EDA-INFO-Data Describe:        ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+2025-04-19 19:44:41,001-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-19 19:44:41,017-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+2025-04-19 19:44:41,040-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_e               4
+phlaosy_ejeob_experie        2
+rceequires_job_trai          2
+ninog_of_employee         7105
+yr_of_estab                199
+region_of_emplo              5
+pmrevnat iling_wage      25454
+unit_of_wage                 4
+full_time_positio            2
+case_status                  2
+dtype: int64
+2025-04-19 19:44:41,473-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-19 19:44:41,476-__main__-INFO-EDA Process Completed
+2025-04-19 19:44:41,478-__main__-INFO-Starting the Feature Engineering Process
+2025-04-19 19:44:41,479-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-19 19:44:41,635-src.components.feature_engineering-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-19 19:44:41,875-src.exception-ERROR-Error Message: 'education_of_employee'
+2025-04-19 19:44:42,582-src.exception-ERROR-Error Details: (<class 'KeyError'>, KeyError('education_of_employee'), <traceback object at 0x18bb83640>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'education_of_employee'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 63, in initiate_feature_engineering
+    X[column] = label_encoder.fit_transform(X[column])
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'education_of_employee'
+
+2025-04-19 19:44:42,583-src.exception-ERROR-Error Message: 'education_of_employee'
+2025-04-19 19:44:42,587-src.exception-ERROR-Error Details: (<class 'src.exception.EasyLaborPredictionException'>, EasyLaborPredictionException("'education_of_employee'"), <traceback object at 0x18bb83cc0>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'education_of_employee'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 63, in initiate_feature_engineering
+    X[column] = label_encoder.fit_transform(X[column])
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'education_of_employee'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/pipeline/pipeline.py", line 36, in initiate_pipeline
+    feature_engineering.initiate_feature_engineering()
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 111, in initiate_feature_engineering
+    raise EasyLaborPredictionException(message=str(e), error=sys.exc_info())
+src.exception.EasyLaborPredictionException: 'education_of_employee'
+
+2025-04-20 21:12:01,354-__main__-INFO-Starting the Data Ingestion Process
+2025-04-20 21:12:01,357-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-20 21:20:44,460-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-20 21:20:44,478-__main__-INFO-Data Ingestion Completed
+2025-04-20 21:20:44,478-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-20 21:20:44,479-src.components.EDA-INFO-EDA processing initialising......
+2025-04-20 21:20:44,481-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-20 21:21:07,947-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-20 21:21:08,245-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-20 21:21:08,386-src.components.EDA-INFO-Data Head:   case_id continent education_of_e phlaosy_ejeob_experie  ... pmrevnat iling_wage  unit_of_wage  full_time_positio case_status
+0  EZYV01      Asia    High School                     N  ...            592.2029          Hour                  Y      Denied
+1  EZYV02      Asia       Master's                     Y  ...          83425.6500          Year                  Y   Certified
+2  EZYV03      Asia     Bachelor's                     N  ...         122996.8600          Year                  Y      Denied
+3  EZYV04      Asia     Bachelor's                     N  ...          83434.0300          Year                  Y      Denied
+4  EZYV05    Africa       Master's                     Y  ...         149907.3900          Year                  Y   Certified
+
+[5 rows x 12 columns]
+2025-04-20 21:21:08,387-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-20 21:21:08,387-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_e         25480 non-null  object 
+ 3   phlaosy_ejeob_experie  25480 non-null  object 
+ 4   rceequires_job_trai    25480 non-null  object 
+ 5   ninog_of_employee      25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_emplo        25480 non-null  object 
+ 8   pmrevnat iling_wage    25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_positio      25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-20 21:21:08,496-src.components.EDA-INFO-Data Describe:        ninog_of_employee   yr_of_estab  pmrevnat iling_wage
+count       25480.000000  25480.000000         25480.000000
+mean         5667.043210   1979.409929         74455.814592
+std         22877.928848     42.366929         52815.942327
+min           -26.000000   1800.000000             2.136700
+25%          1022.000000   1976.000000         34015.480000
+50%          2109.000000   1997.000000         70308.210000
+75%          3504.000000   2005.000000        107735.512500
+max        602069.000000   2016.000000        319210.270000
+2025-04-20 21:21:08,564-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-20 21:21:08,587-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_e           0
+phlaosy_ejeob_experie    0
+rceequires_job_trai      0
+ninog_of_employee        0
+yr_of_estab              0
+region_of_emplo          0
+pmrevnat iling_wage      0
+unit_of_wage             0
+full_time_positio        0
+case_status              0
+dtype: int64
+2025-04-20 21:21:08,623-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_e               4
+phlaosy_ejeob_experie        2
+rceequires_job_trai          2
+ninog_of_employee         7105
+yr_of_estab                199
+region_of_emplo              5
+pmrevnat iling_wage      25454
+unit_of_wage                 4
+full_time_positio            2
+case_status                  2
+dtype: int64
+2025-04-20 21:21:08,791-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-20 21:21:08,806-__main__-INFO-EDA Process Completed
+2025-04-20 21:21:08,807-__main__-INFO-Starting the Feature Engineering Process
+2025-04-20 21:21:08,808-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-20 21:21:08,953-src.components.feature_engineering-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-20 21:21:09,150-src.exception-ERROR-Error Message: 'education_of_employee'
+2025-04-20 21:21:09,449-src.exception-ERROR-Error Details: (<class 'KeyError'>, KeyError('education_of_employee'), <traceback object at 0x199b83380>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'education_of_employee'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 63, in initiate_feature_engineering
+    X[column] = label_encoder.fit_transform(X[column])
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'education_of_employee'
+
+2025-04-20 21:21:09,450-src.exception-ERROR-Error Message: 'education_of_employee'
+2025-04-20 21:21:09,452-src.exception-ERROR-Error Details: (<class 'src.exception.EasyLaborPredictionException'>, EasyLaborPredictionException("'education_of_employee'"), <traceback object at 0x199b82f00>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'education_of_employee'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 63, in initiate_feature_engineering
+    X[column] = label_encoder.fit_transform(X[column])
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/easylaborprediction/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'education_of_employee'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/pipeline/pipeline.py", line 36, in initiate_pipeline
+    feature_engineering.initiate_feature_engineering()
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 111, in initiate_feature_engineering
+    raise EasyLaborPredictionException(message=str(e), error=sys.exc_info())
+src.exception.EasyLaborPredictionException: 'education_of_employee'
+
+2025-04-21 10:33:40,986-__main__-INFO-Starting data ingestion process....
+2025-04-21 10:36:04,385-__main__-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 10:36:04,392-__main__-INFO-Data Ingestion Completed
+2025-04-21 10:40:59,127-__main__-INFO-Starting data ingestion process....
+2025-04-21 10:42:59,111-src.exception-ERROR-Error Message: 'NoneType' object has no attribute 'columns'
+2025-04-21 10:42:59,123-src.exception-ERROR-Error Details: (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'columns'"), <traceback object at 0x1168b3240>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/data_ingestion.py", line 29, in initiate_data_ingestion
+    df.columns = [
+AttributeError: 'NoneType' object has no attribute 'columns'
+
+2025-04-21 11:03:29,113-__main__-INFO-Starting data ingestion process....
+2025-04-21 11:03:31,101-__main__-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 11:03:31,108-__main__-INFO-Data Ingestion Completed
+2025-04-21 11:08:52,971-__main__-INFO-Starting the Data Ingestion Process
+2025-04-21 11:08:52,972-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-21 11:08:53,342-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 11:08:53,349-__main__-INFO-Data Ingestion Completed
+2025-04-21 11:08:53,349-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-21 11:08:53,350-src.components.EDA-INFO-EDA processing initialising......
+2025-04-21 11:08:53,350-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-21 11:08:53,669-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-21 11:08:53,747-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-21 11:08:53,836-src.components.EDA-INFO-Data Head:   case_id continent education_of_employee has_job_experience requires_job_training  no_of_employees  yr_of_estab region_of_employment  prevailing_wage unit_of_wage full_time_position case_status
+0  EZYV01      Asia           High School                  N                     N            14513         2007                 West         592.2029         Hour                  Y      Denied
+1  EZYV02      Asia              Master's                  Y                     N             2412         2002            Northeast       83425.6500         Year                  Y   Certified
+2  EZYV03      Asia            Bachelor's                  N                     Y            44444         2008                 West      122996.8600         Year                  Y      Denied
+3  EZYV04      Asia            Bachelor's                  N                     N               98         1897                 West       83434.0300         Year                  Y      Denied
+4  EZYV05    Africa              Master's                  Y                     N             1082         2005                South      149907.3900         Year                  Y   Certified
+2025-04-21 11:08:53,844-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-21 11:08:53,860-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_employee  25480 non-null  object 
+ 3   has_job_experience     25480 non-null  object 
+ 4   requires_job_training  25480 non-null  object 
+ 5   no_of_employees        25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_employment   25480 non-null  object 
+ 8   prevailing_wage        25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_position     25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-21 11:08:53,977-src.components.EDA-INFO-Data Describe:        no_of_employees   yr_of_estab  prevailing_wage
+count     25480.000000  25480.000000     25480.000000
+mean       5667.043210   1979.409929     74455.814592
+std       22877.928848     42.366929     52815.942327
+min         -26.000000   1800.000000         2.136700
+25%        1022.000000   1976.000000     34015.480000
+50%        2109.000000   1997.000000     70308.210000
+75%        3504.000000   2005.000000    107735.512500
+max      602069.000000   2016.000000    319210.270000
+2025-04-21 11:08:54,078-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-21 11:08:54,142-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_employee    0
+has_job_experience       0
+requires_job_training    0
+no_of_employees          0
+yr_of_estab              0
+region_of_employment     0
+prevailing_wage          0
+unit_of_wage             0
+full_time_position       0
+case_status              0
+dtype: int64
+2025-04-21 11:08:54,230-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_employee        4
+has_job_experience           2
+requires_job_training        2
+no_of_employees           7105
+yr_of_estab                199
+region_of_employment         5
+prevailing_wage          25454
+unit_of_wage                 4
+full_time_position           2
+case_status                  2
+dtype: int64
+2025-04-21 11:08:54,473-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-21 11:08:54,475-__main__-INFO-EDA Process Completed
+2025-04-21 11:08:54,475-__main__-INFO-Starting the Feature Engineering Process
+2025-04-21 11:08:54,476-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-21 11:08:54,554-src.components.feature_engineering-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-21 11:08:54,924-src.components.feature_engineering-INFO-Value counts of the resampled target variable (case_status):
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-21 11:08:56,088-src.components.feature_engineering-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-21 11:08:57,106-src.components.feature_engineering-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-21 11:08:57,106-src.components.feature_engineering-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-21 11:08:57,111-__main__-INFO-Feature Engineering Completed
+2025-04-21 11:08:57,112-__main__-INFO-Starting the Model Training Process
+2025-04-21 11:08:57,267-src.components.model_training-INFO-Training and Test Data Loaded Successfully
+2025-04-21 11:08:58,318-src.components.model_training-INFO-
+======= Training Model: Logistic Regression ======
+2025-04-21 11:09:02,646-src.components.model_training-INFO-Model: Logistic Regression | Accuracy: 0.6933 | Precision: 0.6943Recall: 0.6853F1: 0.6897 | ROC-AUC: 0.747766167854514
+2025-04-21 11:09:02,647-src.components.model_training-INFO-Confusion Matrix:
+[[2399 1022]
+ [1066 2321]]
+2025-04-21 11:09:02,647-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.69      0.70      0.70      3421
+           1       0.69      0.69      0.69      3387
+
+    accuracy                           0.69      6808
+   macro avg       0.69      0.69      0.69      6808
+weighted avg       0.69      0.69      0.69      6808
+
+2025-04-21 11:09:37,599-src.components.model_training-INFO-
+======= Training Model: Decision Tree Classifier ======
+2025-04-21 11:09:40,568-src.components.model_training-INFO-Model: Decision Tree Classifier | Accuracy: 0.7306 | Precision: 0.7253Recall: 0.7381F1: 0.7316 | ROC-AUC: 0.7306483418770138
+2025-04-21 11:09:40,570-src.components.model_training-INFO-Confusion Matrix:
+[[2474  947]
+ [ 887 2500]]
+2025-04-21 11:09:40,570-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.74      0.72      0.73      3421
+           1       0.73      0.74      0.73      3387
+
+    accuracy                           0.73      6808
+   macro avg       0.73      0.73      0.73      6808
+weighted avg       0.73      0.73      0.73      6808
+
+2025-04-21 11:10:04,137-src.components.model_training-INFO-
+======= Training Model: Xgboost ======
+2025-04-21 11:10:07,398-src.components.model_training-INFO-Model: Xgboost | Accuracy: 0.7923 | Precision: 0.8119Recall: 0.7582F1: 0.7841 | ROC-AUC: 0.8752267965440708
+2025-04-21 11:10:07,399-src.components.model_training-INFO-Confusion Matrix:
+[[2826  595]
+ [ 819 2568]]
+2025-04-21 11:10:07,399-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.78      0.83      0.80      3421
+           1       0.81      0.76      0.78      3387
+
+    accuracy                           0.79      6808
+   macro avg       0.79      0.79      0.79      6808
+weighted avg       0.79      0.79      0.79      6808
+
+2025-04-21 11:10:34,096-src.components.model_training-INFO-
+======= Training Model: LSTM ======
+2025-04-21 11:12:43,669-src.components.model_training-INFO-Model: LSTM | Accuracy: 0.7450 | Precision: 0.7848Recall: 0.6717F1: 0.7238 | ROC-AUC: 0.8146590981370643
+2025-04-21 11:12:43,679-src.components.model_training-INFO-Confusion Matrix:
+[[2797  624]
+ [1112 2275]]
+2025-04-21 11:12:43,679-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.72      0.82      0.76      3421
+           1       0.78      0.67      0.72      3387
+
+    accuracy                           0.75      6808
+   macro avg       0.75      0.74      0.74      6808
+weighted avg       0.75      0.75      0.74      6808
+
+2025-04-21 11:13:37,141-numexpr.utils-INFO-NumExpr defaulting to 4 threads.
+2025-04-21 11:17:20,919-__main__-INFO-Starting the Data Ingestion Process
+2025-04-21 11:17:20,921-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-21 11:17:21,377-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 11:17:21,379-__main__-INFO-Data Ingestion Completed
+2025-04-21 11:17:21,380-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-21 11:17:21,380-src.components.EDA-INFO-EDA processing initialising......
+2025-04-21 11:17:21,381-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-21 11:17:21,704-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-21 11:17:21,787-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-21 11:17:21,869-src.components.EDA-INFO-Data Head:   case_id continent  ... full_time_position case_status
+0  EZYV01      Asia  ...                  Y      Denied
+1  EZYV02      Asia  ...                  Y   Certified
+2  EZYV03      Asia  ...                  Y      Denied
+3  EZYV04      Asia  ...                  Y      Denied
+4  EZYV05    Africa  ...                  Y   Certified
+
+[5 rows x 12 columns]
+2025-04-21 11:17:21,870-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-21 11:17:21,870-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_employee  25480 non-null  object 
+ 3   has_job_experience     25480 non-null  object 
+ 4   requires_job_training  25480 non-null  object 
+ 5   no_of_employees        25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_employment   25480 non-null  object 
+ 8   prevailing_wage        25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_position     25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-21 11:17:21,905-src.components.EDA-INFO-Data Describe:        no_of_employees   yr_of_estab  prevailing_wage
+count     25480.000000  25480.000000     25480.000000
+mean       5667.043210   1979.409929     74455.814592
+std       22877.928848     42.366929     52815.942327
+min         -26.000000   1800.000000         2.136700
+25%        1022.000000   1976.000000     34015.480000
+50%        2109.000000   1997.000000     70308.210000
+75%        3504.000000   2005.000000    107735.512500
+max      602069.000000   2016.000000    319210.270000
+2025-04-21 11:17:21,948-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-21 11:17:21,980-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_employee    0
+has_job_experience       0
+requires_job_training    0
+no_of_employees          0
+yr_of_estab              0
+region_of_employment     0
+prevailing_wage          0
+unit_of_wage             0
+full_time_position       0
+case_status              0
+dtype: int64
+2025-04-21 11:17:22,026-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_employee        4
+has_job_experience           2
+requires_job_training        2
+no_of_employees           7105
+yr_of_estab                199
+region_of_employment         5
+prevailing_wage          25454
+unit_of_wage                 4
+full_time_position           2
+case_status                  2
+dtype: int64
+2025-04-21 11:17:22,125-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-21 11:17:22,127-__main__-INFO-EDA Process Completed
+2025-04-21 11:17:22,128-__main__-INFO-Starting the Feature Engineering Process
+2025-04-21 11:17:22,128-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-21 11:17:22,208-src.components.feature_engineering-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-21 11:17:22,461-src.components.feature_engineering-INFO-Value counts of the resampled target variable (case_status):
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-21 11:17:23,120-src.components.feature_engineering-INFO-Full resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-21 11:17:23,668-src.components.feature_engineering-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-21 11:17:23,668-src.components.feature_engineering-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-21 11:17:23,683-__main__-INFO-Feature Engineering Completed
+2025-04-21 11:17:23,685-__main__-INFO-Starting the Model Training Process
+2025-04-21 11:17:23,849-src.components.model_training-INFO-Training and Test Data Loaded Successfully
+2025-04-21 11:17:25,680-src.components.model_training-INFO-
+======= Training Model: Logistic Regression ======
+2025-04-21 11:17:30,427-src.components.model_training-INFO-Model: Logistic Regression | Accuracy: 0.6933 | Precision: 0.6943Recall: 0.6853F1: 0.6897 | ROC-AUC: 0.747766167854514
+2025-04-21 11:17:30,430-src.components.model_training-INFO-Confusion Matrix:
+[[2399 1022]
+ [1066 2321]]
+2025-04-21 11:17:30,431-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.69      0.70      0.70      3421
+           1       0.69      0.69      0.69      3387
+
+    accuracy                           0.69      6808
+   macro avg       0.69      0.69      0.69      6808
+weighted avg       0.69      0.69      0.69      6808
+
+2025-04-21 11:19:00,279-src.components.model_training-INFO-
+======= Training Model: Decision Tree Classifier ======
+2025-04-21 11:19:03,659-src.components.model_training-INFO-Model: Decision Tree Classifier | Accuracy: 0.7306 | Precision: 0.7253Recall: 0.7381F1: 0.7316 | ROC-AUC: 0.7306483418770138
+2025-04-21 11:19:03,661-src.components.model_training-INFO-Confusion Matrix:
+[[2474  947]
+ [ 887 2500]]
+2025-04-21 11:19:03,661-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.74      0.72      0.73      3421
+           1       0.73      0.74      0.73      3387
+
+    accuracy                           0.73      6808
+   macro avg       0.73      0.73      0.73      6808
+weighted avg       0.73      0.73      0.73      6808
+
+2025-04-21 11:19:26,834-src.components.model_training-INFO-
+======= Training Model: Xgboost ======
+2025-04-21 11:19:30,076-src.components.model_training-INFO-Model: Xgboost | Accuracy: 0.7923 | Precision: 0.8119Recall: 0.7582F1: 0.7841 | ROC-AUC: 0.8752267965440708
+2025-04-21 11:19:30,077-src.components.model_training-INFO-Confusion Matrix:
+[[2826  595]
+ [ 819 2568]]
+2025-04-21 11:19:30,077-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.78      0.83      0.80      3421
+           1       0.81      0.76      0.78      3387
+
+    accuracy                           0.79      6808
+   macro avg       0.79      0.79      0.79      6808
+weighted avg       0.79      0.79      0.79      6808
+
+2025-04-21 11:19:51,656-src.components.model_training-INFO-
+======= Training Model: LSTM ======
+2025-04-21 11:22:16,583-src.components.model_training-INFO-Model: LSTM | Accuracy: 0.7446 | Precision: 0.7631Recall: 0.7056F1: 0.7332 | ROC-AUC: 0.8152028143441311
+2025-04-21 11:22:16,588-src.components.model_training-INFO-Confusion Matrix:
+[[2679  742]
+ [ 997 2390]]
+2025-04-21 11:22:16,588-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.73      0.78      0.75      3421
+           1       0.76      0.71      0.73      3387
+
+    accuracy                           0.74      6808
+   macro avg       0.75      0.74      0.74      6808
+weighted avg       0.75      0.74      0.74      6808
+
+2025-04-21 11:23:42,833-src.components.model_training-INFO-
+Best Model: Xgboost with ROC-AUC: 0.8752
+2025-04-21 11:23:42,891-src.components.model_training-INFO-Best model saved to: artifacts/1_model.pkl
+2025-04-21 11:23:42,905-__main__-INFO-Model Training Completed
+2025-04-21 11:23:42,906-__main__-INFO-Starting the Hyperparameter Tuning
+2025-04-21 11:23:43,062-src.components.hyperparameter_tuning-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-21 11:23:43,078-src.components.hyperparameter_tuning-INFO-Starting hyperparameter tuning...
+2025-04-21 11:26:49,435-src.components.hyperparameter_tuning-INFO-ROC-AUC on Test Data: 0.8837
+2025-04-21 11:26:49,438-src.components.hyperparameter_tuning-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-21 11:26:49,949-src.components.hyperparameter_tuning-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-21 11:26:49,988-__main__-INFO-Hyperparameter Tuning Completed
+2025-04-21 14:36:01,090-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-21 14:36:01,235-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-21 14:36:01,366-__main__-INFO-Label encoders saved as label_encoders.pkl
+2025-04-21 14:36:01,391-__main__-INFO-Scaler saved as scaler.pkl
+2025-04-21 14:36:01,401-__main__-INFO-Target encoder saved as target_encoder.pkl
+2025-04-21 14:36:01,954-__main__-INFO-Resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-21 14:36:02,057-__main__-INFO-Resampled class distribution:
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-21 14:36:03,672-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-21 14:36:03,673-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-21 14:36:03,684-__main__-INFO-Feature Engineering Process Completed...
+2025-04-21 14:37:04,731-__main__-INFO-Starting the Feature Engineering Process....
+2025-04-21 14:37:04,961-__main__-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-21 14:37:05,231-__main__-INFO-Label encoders saved as label_encoders.pkl
+2025-04-21 14:37:05,285-__main__-INFO-Scaler saved as scaler.pkl
+2025-04-21 14:37:05,312-__main__-INFO-Target encoder saved as target_encoder.pkl
+2025-04-21 14:37:06,083-__main__-INFO-Resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-21 14:37:06,114-__main__-INFO-Resampled class distribution:
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-21 14:37:07,065-__main__-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-21 14:37:07,065-__main__-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-21 14:37:07,076-__main__-INFO-Feature Engineering Process Completed...
+2025-04-21 15:23:19,374-numexpr.utils-INFO-NumExpr defaulting to 4 threads.
+2025-04-21 15:25:50,702-__main__-INFO-Starting the Data Ingestion Process
+2025-04-21 15:25:50,704-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-21 15:25:51,172-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 15:25:51,174-__main__-INFO-Data Ingestion Completed
+2025-04-21 15:25:51,174-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-21 15:25:51,175-src.components.EDA-INFO-EDA processing initialising......
+2025-04-21 15:25:51,175-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-21 15:25:51,607-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-21 15:25:51,696-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-21 15:25:51,747-src.components.EDA-INFO-Data Head:   case_id continent education_of_employee has_job_experience  ... prevailing_wage  unit_of_wage  full_time_position case_status
+0  EZYV01      Asia           High School                  N  ...        592.2029          Hour                   Y      Denied
+1  EZYV02      Asia              Master's                  Y  ...      83425.6500          Year                   Y   Certified
+2  EZYV03      Asia            Bachelor's                  N  ...     122996.8600          Year                   Y      Denied
+3  EZYV04      Asia            Bachelor's                  N  ...      83434.0300          Year                   Y      Denied
+4  EZYV05    Africa              Master's                  Y  ...     149907.3900          Year                   Y   Certified
+
+[5 rows x 12 columns]
+2025-04-21 15:25:51,747-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-21 15:25:51,747-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_employee  25480 non-null  object 
+ 3   has_job_experience     25480 non-null  object 
+ 4   requires_job_training  25480 non-null  object 
+ 5   no_of_employees        25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_employment   25480 non-null  object 
+ 8   prevailing_wage        25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_position     25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-21 15:25:51,789-src.components.EDA-INFO-Data Describe:        no_of_employees   yr_of_estab  prevailing_wage
+count     25480.000000  25480.000000     25480.000000
+mean       5667.043210   1979.409929     74455.814592
+std       22877.928848     42.366929     52815.942327
+min         -26.000000   1800.000000         2.136700
+25%        1022.000000   1976.000000     34015.480000
+50%        2109.000000   1997.000000     70308.210000
+75%        3504.000000   2005.000000    107735.512500
+max      602069.000000   2016.000000    319210.270000
+2025-04-21 15:25:51,856-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-21 15:25:51,872-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_employee    0
+has_job_experience       0
+requires_job_training    0
+no_of_employees          0
+yr_of_estab              0
+region_of_employment     0
+prevailing_wage          0
+unit_of_wage             0
+full_time_position       0
+case_status              0
+dtype: int64
+2025-04-21 15:25:51,910-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_employee        4
+has_job_experience           2
+requires_job_training        2
+no_of_employees           7105
+yr_of_estab                199
+region_of_employment         5
+prevailing_wage          25454
+unit_of_wage                 4
+full_time_position           2
+case_status                  2
+dtype: int64
+2025-04-21 15:25:52,048-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-21 15:25:52,050-__main__-INFO-EDA Process Completed
+2025-04-21 15:25:52,050-__main__-INFO-Starting the Feature Engineering Process
+2025-04-21 15:25:52,050-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-21 15:25:52,135-src.exception-ERROR-Error Message: 'method' object is not subscriptable
+2025-04-21 15:25:52,139-src.exception-ERROR-Error Details: (<class 'TypeError'>, TypeError("'method' object is not subscriptable"), <traceback object at 0x16f244100>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 47, in initiate_feature_engineering
+    df.drop['case_id']
+    ~~~~~~~^^^^^^^^^^^
+TypeError: 'method' object is not subscriptable
+
+2025-04-21 15:25:52,139-src.exception-ERROR-Error Message: 'method' object is not subscriptable
+2025-04-21 15:25:52,147-src.exception-ERROR-Error Details: (<class 'src.exception.EasyLaborPredictionException'>, EasyLaborPredictionException("'method' object is not subscriptable"), <traceback object at 0x16e87cb40>)Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 47, in initiate_feature_engineering
+    df.drop['case_id']
+    ~~~~~~~^^^^^^^^^^^
+TypeError: 'method' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/pipeline/pipeline.py", line 36, in initiate_pipeline
+    feature_engineering.initiate_feature_engineering()
+  File "/Users/mac/Desktop/easy_labor_prediction_project_with_ml/src/components/feature_engineering.py", line 121, in initiate_feature_engineering
+    raise EasyLaborPredictionException(message=str(e), error=sys.exc_info())
+src.exception.EasyLaborPredictionException: 'method' object is not subscriptable
+
+2025-04-21 15:28:35,626-numexpr.utils-INFO-NumExpr defaulting to 4 threads.
+2025-04-21 15:29:09,208-__main__-INFO-Starting the Data Ingestion Process
+2025-04-21 15:29:09,210-src.components.data_ingestion-INFO-Starting data ingestion process....
+2025-04-21 15:29:09,488-src.components.data_ingestion-INFO-Data saved to CSV at: artifacts/dataset/olfc_data.csv
+2025-04-21 15:29:09,490-__main__-INFO-Data Ingestion Completed
+2025-04-21 15:29:09,490-__main__-INFO-Starting the Explorative Data Analysis
+2025-04-21 15:29:09,491-src.components.EDA-INFO-EDA processing initialising......
+2025-04-21 15:29:09,491-src.components.EDA-INFO-Loading data from: artifacts/dataset/olfc_data.csv
+2025-04-21 15:29:09,641-src.components.EDA-INFO-Data loaded successfully loaded
+2025-04-21 15:29:09,696-src.components.EDA-INFO-Generating the EDA Summary
+2025-04-21 15:29:09,741-src.components.EDA-INFO-Data Head:   case_id continent  ... full_time_position case_status
+0  EZYV01      Asia  ...                  Y      Denied
+1  EZYV02      Asia  ...                  Y   Certified
+2  EZYV03      Asia  ...                  Y      Denied
+3  EZYV04      Asia  ...                  Y      Denied
+4  EZYV05    Africa  ...                  Y   Certified
+
+[5 rows x 12 columns]
+2025-04-21 15:29:09,741-src.components.EDA-INFO-Data Shape: (25480, 12)
+2025-04-21 15:29:09,741-src.components.EDA-INFO-Data Info: <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 25480 entries, 0 to 25479
+Data columns (total 12 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   case_id                25480 non-null  object 
+ 1   continent              25480 non-null  object 
+ 2   education_of_employee  25480 non-null  object 
+ 3   has_job_experience     25480 non-null  object 
+ 4   requires_job_training  25480 non-null  object 
+ 5   no_of_employees        25480 non-null  int64  
+ 6   yr_of_estab            25480 non-null  int64  
+ 7   region_of_employment   25480 non-null  object 
+ 8   prevailing_wage        25480 non-null  float64
+ 9   unit_of_wage           25480 non-null  object 
+ 10  full_time_position     25480 non-null  object 
+ 11  case_status            25480 non-null  object 
+dtypes: float64(1), int64(2), object(9)
+memory usage: 2.3+ MB
+
+2025-04-21 15:29:09,769-src.components.EDA-INFO-Data Describe:        no_of_employees   yr_of_estab  prevailing_wage
+count     25480.000000  25480.000000     25480.000000
+mean       5667.043210   1979.409929     74455.814592
+std       22877.928848     42.366929     52815.942327
+min         -26.000000   1800.000000         2.136700
+25%        1022.000000   1976.000000     34015.480000
+50%        2109.000000   1997.000000     70308.210000
+75%        3504.000000   2005.000000    107735.512500
+max      602069.000000   2016.000000    319210.270000
+2025-04-21 15:29:09,803-src.components.EDA-INFO-Duplicated Values: 0
+2025-04-21 15:29:09,817-src.components.EDA-INFO-Missing Values: 
+case_id                  0
+continent                0
+education_of_employee    0
+has_job_experience       0
+requires_job_training    0
+no_of_employees          0
+yr_of_estab              0
+region_of_employment     0
+prevailing_wage          0
+unit_of_wage             0
+full_time_position       0
+case_status              0
+dtype: int64
+2025-04-21 15:29:09,848-src.components.EDA-INFO-Unique Values: 
+case_id                  25480
+continent                    6
+education_of_employee        4
+has_job_experience           2
+requires_job_training        2
+no_of_employees           7105
+yr_of_estab                199
+region_of_employment         5
+prevailing_wage          25454
+unit_of_wage                 4
+full_time_position           2
+case_status                  2
+dtype: int64
+2025-04-21 15:29:09,965-src.components.EDA-INFO-EDA Summary saved to: artifacts/eda/eda_report
+2025-04-21 15:29:09,967-__main__-INFO-EDA Process Completed
+2025-04-21 15:29:09,967-__main__-INFO-Starting the Feature Engineering Process
+2025-04-21 15:29:09,968-src.components.feature_engineering-INFO-Starting the Feature Engineering Process....
+2025-04-21 15:29:10,053-src.components.feature_engineering-INFO-Data Loaded from: artifacts/dataset/olfc_data.csv
+2025-04-21 15:29:10,114-src.components.feature_engineering-INFO-Label encoders saved as label_encoders.pkl
+2025-04-21 15:29:10,130-src.components.feature_engineering-INFO-Scaler saved as scaler.pkl
+2025-04-21 15:29:10,143-src.components.feature_engineering-INFO-Target encoder saved as target_encoder.pkl
+2025-04-21 15:29:11,354-src.components.feature_engineering-INFO-Resampled dataset saved to artifacts/feature_eng/processed_data.csv
+2025-04-21 15:29:11,359-src.components.feature_engineering-INFO-Resampled class distribution:
+case_status
+1    17018
+0    17018
+Name: count, dtype: int64
+2025-04-21 15:29:12,402-src.components.feature_engineering-INFO-Train dataset saved to artifacts/feature_eng/train_data.csv
+2025-04-21 15:29:12,402-src.components.feature_engineering-INFO-Test dataset saved to artifacts/feature_eng/test_data.csv
+2025-04-21 15:29:12,408-__main__-INFO-Feature Engineering Completed
+2025-04-21 15:29:12,409-__main__-INFO-Starting the Model Training Process
+2025-04-21 15:29:12,609-src.components.model_training-INFO-Training and Test Data Loaded Successfully
+2025-04-21 15:29:14,221-src.components.model_training-INFO-
+======= Training Model: Logistic Regression ======
+2025-04-21 15:29:19,023-src.components.model_training-INFO-Model: Logistic Regression | Accuracy: 0.6272 | Precision: 0.6425Recall: 0.5651F1: 0.6013 | ROC-AUC: 0.6661378810792543
+2025-04-21 15:29:19,092-src.components.model_training-INFO-Confusion Matrix:
+[[2356 1065]
+ [1473 1914]]
+2025-04-21 15:29:19,094-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.62      0.69      0.65      3421
+           1       0.64      0.57      0.60      3387
+
+    accuracy                           0.63      6808
+   macro avg       0.63      0.63      0.63      6808
+weighted avg       0.63      0.63      0.63      6808
+
+2025-04-21 15:30:12,591-src.components.model_training-INFO-
+======= Training Model: Decision Tree Classifier ======
+2025-04-21 15:30:15,850-src.components.model_training-INFO-Model: Decision Tree Classifier | Accuracy: 0.6952 | Precision: 0.6910Recall: 0.7006F1: 0.6958 | ROC-AUC: 0.6952383923709884
+2025-04-21 15:30:15,852-src.components.model_training-INFO-Confusion Matrix:
+[[2360 1061]
+ [1014 2373]]
+2025-04-21 15:30:15,852-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.70      0.69      0.69      3421
+           1       0.69      0.70      0.70      3387
+
+    accuracy                           0.70      6808
+   macro avg       0.70      0.70      0.70      6808
+weighted avg       0.70      0.70      0.70      6808
+
+2025-04-21 15:30:37,969-src.components.model_training-INFO-
+======= Training Model: Xgboost ======
+2025-04-21 15:30:41,268-src.components.model_training-INFO-Model: Xgboost | Accuracy: 0.7421 | Precision: 0.7456Recall: 0.7310F1: 0.7382 | ROC-AUC: 0.8261642625348378
+2025-04-21 15:30:41,269-src.components.model_training-INFO-Confusion Matrix:
+[[2576  845]
+ [ 911 2476]]
+2025-04-21 15:30:41,269-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.74      0.75      0.75      3421
+           1       0.75      0.73      0.74      3387
+
+    accuracy                           0.74      6808
+   macro avg       0.74      0.74      0.74      6808
+weighted avg       0.74      0.74      0.74      6808
+
+2025-04-21 15:31:02,434-src.components.model_training-INFO-
+======= Training Model: LSTM ======
+2025-04-21 15:32:56,844-src.components.model_training-INFO-Model: LSTM | Accuracy: 0.6917 | Precision: 0.7196Recall: 0.6230F1: 0.6678 | ROC-AUC: 0.7694175081969533
+2025-04-21 15:32:56,855-src.components.model_training-INFO-Confusion Matrix:
+[[2599  822]
+ [1277 2110]]
+2025-04-21 15:32:56,856-src.components.model_training-INFO-Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.67      0.76      0.71      3421
+           1       0.72      0.62      0.67      3387
+
+    accuracy                           0.69      6808
+   macro avg       0.70      0.69      0.69      6808
+weighted avg       0.69      0.69      0.69      6808
+
+2025-04-21 15:59:15,854-urllib3.connectionpool-WARNING-Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /OluomaOji/easy_labor_prediction_project_with_ml.mlflow/api/2.0/mlflow-artifacts/artifacts/65b5374208c24216bb0311e16c10772c/1027becc06064b8ca00295106425e654/artifacts/artifacts/MLmodel
+2025-04-21 15:59:33,113-src.components.model_training-INFO-
+Best Model: Xgboost with ROC-AUC: 0.8262
+2025-04-21 15:59:33,199-src.components.model_training-INFO-Best model saved to: artifacts/1_model.pkl
+2025-04-21 15:59:33,199-__main__-INFO-Model Training Completed
+2025-04-21 15:59:33,199-__main__-INFO-Starting the Hyperparameter Tuning
+2025-04-21 15:59:33,416-src.components.hyperparameter_tuning-INFO-Training and Test Data Loaded for Hyperparameter Tuning
+2025-04-21 15:59:33,445-src.components.hyperparameter_tuning-INFO-Starting hyperparameter tuning...
+2025-04-21 16:02:01,037-src.components.hyperparameter_tuning-INFO-ROC-AUC on Test Data: 0.8366
+2025-04-21 16:02:01,038-src.components.hyperparameter_tuning-INFO-Best Parameters: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'n_estimators': 1500, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.2, 'colsample_bytree': 0.8}
+2025-04-21 16:02:01,789-src.components.hyperparameter_tuning-INFO-Best tuned XGBoost model saved to: artifacts/model.pkl
+2025-04-21 16:02:01,813-__main__-INFO-Hyperparameter Tuning Completed

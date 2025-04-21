@@ -3,9 +3,11 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-tabula-py
 imblearn
 xgboost
 tensorflow
 mlflow
+fastapi 
+uvicorn
+pydantic
 
