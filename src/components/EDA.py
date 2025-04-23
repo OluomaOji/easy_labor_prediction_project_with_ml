@@ -1,3 +1,4 @@
+# import libraries
 import os
 import sys
 
@@ -5,14 +6,17 @@ import pandas as pd
 import numpy as np
 from io import StringIO
 
+# Custom imports
 from src.utils.config import EDAConfig
 from src.logging import get_logger
 from src.exception import EasyLaborPredictionException
 
+# initialise the logger
 logging = get_logger(__name__)
 
 class EDA:
     def __init__(self):
+        # loading configuration
         self.EDA_config=EDAConfig()
 
     def initialising_eda(self):
@@ -64,7 +68,3 @@ class EDA:
         except Exception as e:
             raise EasyLaborPredictionException(message=str(e),error=sys.exc_info())
         
-if __name__=="__main__":
-    eda = EDA()
-    eda_pdf = eda.initialising_eda()
-    logging.info('EDA Process Completed')

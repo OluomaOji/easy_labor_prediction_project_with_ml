@@ -1,3 +1,4 @@
+# import libraries
 import os
 import sys
 import pandas as pd
@@ -23,14 +24,17 @@ import mlflow.sklearn
 from mlflow.models.signature import infer_signature
 from joblib import dump
 
+# custom imports
 from src.logging import get_logger
 from src.exception import EasyLaborPredictionException
 from src.utils.config import ModelTrainingConfig
 
+# initialise the logger
 logging = get_logger(__name__)
 
 class ModelTraining:
     def __init__(self):
+        # load the configuration
         self.model_training_config=ModelTrainingConfig()
 
     def build_lstm_model(self, input_shape):
@@ -45,11 +49,24 @@ class ModelTraining:
         return model
 
     def initiate_model_training(self):
+        """
+        initialise the Model Training
+        1) Load the train and test datasets from the CSV files specified in the configuration.
+        2) Seperate the feature set X from the target y for both training and the testing.
+        3) The models defined in a dictionary.
+        4) Set up MLFLOW for tracking experiments.
+        5) Train and Evaluate Each Model, Log Metrics and Save Artifacts.
+        6) Determine the best model based on the ROC-AUC score.
+        7) Save the best model to .pkl
+
+        """
         try:
+            # 1) Load the train and test datasets from the CSV files specified in the configuration
             train_data = pd.read_csv(self.model_training_config.train_path)
             test_data = pd.read_csv(self.model_training_config.test_path)
             logging.info("Training and Test Data Loaded Successfully")
 
+            # 2) Seperate the feature set X from the target y for both training and the testing.
             target_column='case_status'
 
             X_train=train_data.drop(columns=target_column)
@@ -57,6 +74,7 @@ class ModelTraining:
             X_test=test_data.drop(columns=target_column)
             y_test=test_data[target_column]
 
+            # 3) The models defined in a dictionary
             models ={ 
                 "Logistic Regression": LogisticRegression(solver="liblinear",max_iter=1000),
                 "Decision Tree Classifier": DecisionTreeClassifier(random_state=42),
@@ -69,7 +87,7 @@ class ModelTraining:
             best_model_name=None
             best_roc_auc= float("-inf")
 
-            # Set up MLFLOW for tracking experiments
+            # 4) Set up MLFLOW for tracking experiments
             os.environ["MLFLOW_TRACKING_URI"] = self.model_training_config.MLFLOW_TRACKING_URI
             os.environ["MLFLOW_TRACKING_USERNAME"] = self.model_training_config.MLFLOW_TRACKING_USERNAME
             os.environ["MLFLOW_TRACKING_PASSWORD"] = self.model_training_config.MLFLOW_TRACKING_PASSWORD
@@ -80,7 +98,7 @@ class ModelTraining:
             experiment_name = "Easy_Labor_Prediction"
             mlflow.set_experiment(experiment_name)
 
-            # Train and Evaluate Each Model, Log Metrics and Save Artifacts.
+            # 5) Train and Evaluate Each Model, Log Metrics and Save Artifacts.
             for model_name, model in models.items():
                 logging.info(f"\n======= Training Model: {model_name} ======")
 
@@ -138,6 +156,7 @@ class ModelTraining:
 
                     mlflow.end_run()
 
+                # 6) Determine the best model based on the ROC-AUC score.
                 current_roc = roc_auc if roc_auc else 0.0
                 if current_roc > best_roc_auc:
                     best_roc_auc = current_roc
@@ -146,7 +165,7 @@ class ModelTraining:
 
             logging.info(f"\nBest Model: {best_model_name} with ROC-AUC: {best_roc_auc:.4f}")
 
-            # Save the best model to .pkl
+            # 7) Save the best model to .pkl
             if best_model is not None:
                 model_path = self.model_training_config.best_model
                 dump(best_model, model_path)
@@ -154,9 +173,3 @@ class ModelTraining:
 
         except Exception as e:
             raise EasyLaborPredictionException(message=str(e),error=sys.exc_info())
-        
-if __name__=="__main__":
-    modeltraining = ModelTraining()
-    best_model = modeltraining.initiate_model_training()
-    logging.info("Model Training Process Completed...")
-

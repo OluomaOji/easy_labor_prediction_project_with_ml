@@ -1,6 +1,8 @@
+# Import Libraries
 import os
 import sys
 
+# Custom Imports
 from src.exception import EasyLaborPredictionException
 from src.logging import get_logger
 
@@ -17,6 +19,14 @@ class RunPipeline:
         pass
 
     def initiate_pipeline(self):
+        """
+        Initialise the Pipeline
+        1) Data Ingestion
+        2) EDA
+        3) Feature Engineering
+        4) Model Training
+        5) Hyperparameter Tuning
+        """
         try:
            # 1) Data Ingestion
            logging.info("Starting the Data Ingestion Process")

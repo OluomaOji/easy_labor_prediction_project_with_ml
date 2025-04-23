@@ -29,11 +29,22 @@ class HyperparameterTuning:
         self.hyperparameter_config = HyperParameterTuningConfig()
 
     def initiate_hyperparameter_tuning(self):
+        """
+        initialise the Model Training
+        1) Load the train and test datasets from the CSV files specified in the configuration.
+        2) Seperate the feature set X from the target y for both training and the testing.
+        3) Define the Model
+        4) Set up MLFLOW for tracking experiments.
+        5) Train and Evaluate Each Model, Log Metrics and Save Artifacts.
+        6) Save the model to .pkl
+        """
         try:
+            # ) Load the train and test datasets from the CSV files specified in the configuration.
             train_data = pd.read_csv(self.hyperparameter_config.train_path)
             test_data = pd.read_csv(self.hyperparameter_config.test_path)
             logging.info("Training and Test Data Loaded for Hyperparameter Tuning")
 
+            # 2) Seperate the feature set X from the target y for both training and the testing.
             target_column = 'case_status'
 
             X_train = train_data.drop(columns=[target_column])
@@ -41,6 +52,7 @@ class HyperparameterTuning:
             X_test = test_data.drop(columns=[target_column])
             y_test = test_data[target_column]
 
+            # 3) Define the Model
             xgb_clf = XGBClassifier()
 
             param_dist = {
@@ -80,7 +92,7 @@ class HyperparameterTuning:
             recall = recall_score(y_test, y_pred, average='binary')
             f1 = f1_score(y_test, y_pred, average='binary')
 
-            # Set up MLFLOW for tracking experiments
+            # 4) Set up MLFLOW for tracking experiments
             os.environ["MLFLOW_TRACKING_URI"] = self.hyperparameter_config.MLFLOW_TRACKING_URI
             os.environ["MLFLOW_TRACKING_USERNAME"] = self.hyperparameter_config.MLFLOW_TRACKING_USERNAME
             os.environ["MLFLOW_TRACKING_PASSWORD"] = self.hyperparameter_config.MLFLOW_TRACKING_PASSWORD
@@ -94,6 +106,7 @@ class HyperparameterTuning:
             model_name="Xgboost Hyperparameter"
 
             with mlflow.start_run(run_name=model_name):
+                # 5) Train and Evaluate Each Model, Log Metrics and Save Artifacts.
                 mlflow.log_params(best_params)
                 mlflow.log_metric("roc_auc", roc_auc)
                 mlflow.log_metric("accuracy", accuracy)
@@ -112,14 +125,9 @@ class HyperparameterTuning:
                 logging.info(f"ROC-AUC on Test Data: {roc_auc:.4f}")
                 logging.info(f"Best Parameters: {best_params}")
 
-            # Save the best model
+            # 6) Save the model to .pkl
             dump(best_model, self.hyperparameter_config.best_model)
             logging.info(f"Best tuned XGBoost model saved to: {self.hyperparameter_config.best_model}")
 
         except Exception as e:
             raise EasyLaborPredictionException(message=str(e), error=sys.exc_info())
-
-if __name__ == "__main__":
-    tuner = HyperparameterTuning()
-    tuner.initiate_hyperparameter_tuning()
-    logging.info("XGBoost Hyperparameter Tuning Completed...")
