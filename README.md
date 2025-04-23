@@ -2,7 +2,7 @@
 
 In FY 2016, OFLC processed  775,979 employer applications  for  1,699,957 positions, marking a  9% increase from the previous year. The growing number of these applications has made manual review tedious and inefficient, necessitating an ML-driven approach.
 
-A machine learning-powered API that predicts the likelihood of labor based on physiological and clinical features. Built with **FastAPI**, containerized using **Docker**, and designed for deployment to the cloud.
+A machine learning-powered API that predicts the likelihood of being approved for an H1-visa. Built with **FastAPI**, containerized using **Docker**, and designed for deployment to the cloud.
 
 ---
 
