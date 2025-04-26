@@ -1,6 +1,6 @@
 #  Easy Labor Prediction with Machine Learning
 
-In FY 2016, OFLC processed  775,979 employer applications  for  1,699,957 positions, marking a  9% increase from the previous year. The growing number of these applications has made manual review tedious and inefficient, necessitating an ML-driven approach.
+OFLC has hired You as a data scientist to analyse the data provided, and come up with insights that will be helpful in making data-driven decisions to; Facilitate the process of H1-visa approvals. Recommend a suitable profile for the applicants for whom the visa should be certified or denied based on the drivers that significantly influence the case status.
 
 A machine learning-powered API that predicts the likelihood of being approved for an H1-visa. Built with **FastAPI**, containerized using **Docker**, and designed for deployment to the cloud.
 
